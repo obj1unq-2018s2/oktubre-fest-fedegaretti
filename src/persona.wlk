@@ -1,20 +1,25 @@
 class Persona {
 	var peso 
-	const jarrasCompradas = []
-	const escuchaMusicaTradicional
+	const jarrasCompradas = #{}
+	const leGustaLaMusica
 	const aguante 
 	
-	method estaEbria()
+	method estaEbria() = (self.totalDeAlcoholQueConsumio() * peso) > aguante 
 	
-	method marcasQueLeGusta()
+	method leGustaMarca(marca)
+	
+	method totalDeAlcoholQueConsumio() =
+		jarrasCompradas.sum{ jarra => jarra.cantidadDeAlcohol() }
+	
+		
 }
 
 class Belga inherits Persona {
-	
+	override method leGustaMarca(marca) = marca.lupulo() > 4
 }
 
 class Aleman inherits Persona {
-	
+	override method leGustaMarca(marca) = true
 }
 
 class Checo inherits Persona {
