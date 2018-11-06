@@ -15,14 +15,26 @@ class Persona {
 }
 
 class Belga inherits Persona {
+	
+	method pais() = "Belgica"
+
 	override method leGustaMarca(marca) = marca.lupulo() > 4
+
 }
 
 class Aleman inherits Persona {
+	
+	method pais() = "Alemania"
+	
 	override method leGustaMarca(marca) = true
+
 }
 
 class Checo inherits Persona {
+
+	method pais() = "Alemania"
+
+	override method leGustaMarca(marca) = marca.graduacionAlcoholica() > 8
 	
 }
 

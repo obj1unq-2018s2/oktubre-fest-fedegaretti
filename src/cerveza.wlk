@@ -1,5 +1,5 @@
 
-class MarcaDeCerveza {
+class Cerveza {
 	const lupulo
 	const pais
 	
@@ -7,24 +7,25 @@ class MarcaDeCerveza {
 	
 }
 
-class CervezaRubia inherits MarcaDeCerveza {
+class CervezaRubia inherits Cerveza {
 	var property graduacion
 	
 	override method graduacionAlcoholica() = graduacion
 
 }
 
-class CervezaNegra inherits MarcaDeCerveza {
+class CervezaNegra inherits Cerveza {
 	
-	override method graduacionAlcoholica(){}	
+	override method graduacionAlcoholica() = graduacionReglamentaria.graduacion().min(lupulo*2)
 	
 }
 
-class CervezaRoja inherits MarcaDeCerveza {
+class CervezaRoja inherits CervezaNegra {
 	
-	
+	override method graduacionAlcoholica() = super() * 1.25
 }
 
 object graduacionReglamentaria {
 	var property graduacion 
+	
 }

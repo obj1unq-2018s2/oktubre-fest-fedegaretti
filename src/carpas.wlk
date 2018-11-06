@@ -1,5 +1,5 @@
 class Carpa {
 	const limiteDeGente
 	const tieneBanda	
-	
-}//das
+	const jarras
+}
